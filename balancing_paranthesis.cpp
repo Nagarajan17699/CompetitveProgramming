@@ -1,6 +1,12 @@
 /*
 PROGRAM STATEMENT:  Balance the given Paranthesis
 			
+
+i/p: (())()
+o/p: 3 
+
+i.p: (()()
+o/p: Not Balanced
 */
 
 #include<bits/stdc++.h>
