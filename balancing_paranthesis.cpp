@@ -9,7 +9,8 @@ i.p: (()()
 o/p: Not Balanced
 */
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
 int main()
 {
