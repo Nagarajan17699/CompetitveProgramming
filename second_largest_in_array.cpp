@@ -1,3 +1,29 @@
+/*
+Second Maximum
+
+Problem Statement:
+
+Find second maximum number in array
+
+Input Format
+N - number of array elements
+
+array elements
+
+Contraints
+1<=N<=10000
+
+Output Format
+print second maximum value
+
+Sample Input
+20
+53 456 13 465 312 654 312 6565 312 45 5 132 5 46 152 12 645 5 312 645
+Sample Output
+654
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define pb(x) push_back(x)
