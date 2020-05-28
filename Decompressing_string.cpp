@@ -1,27 +1,21 @@
 /*
-Second Maximum
-
-//Problem Statement:
-
-Find second maximum number in array
+//Decompressing a string
+//Problem Statement
+Given a compressed string find the corresponding decompressed string.
 
 Input Format
-N - number of array elements
-
-array elements
+Accept a compressed string.
 
 Contraints
-1<=N<=10000
+1<=len<=1000
 
 Output Format
-print second maximum value
+Print the decompressed string.
 
 Sample Input
-20
-53 456 13 465 312 654 312 6565 312 45 5 132 5 46 152 12 645 5 312 645
+x120
 Sample Output
-654
-
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 */
 
 #include <bits/stdc++.h>
@@ -58,32 +52,38 @@ int main()
      freopen("output.txt","w",stdout);
     #endif
 
-    int temp,num;
-    vi v;
-    sn(num);
+   string str;
+   cin>>str;
+   mci m;
+   char tmp=',';
+   int num=0;
 
-    for(int i=0;i<num;i++)
-    {
-        cin>>temp;
-        v.pb(temp);
-    }
-
-    int first = INT_MIN, sec = INT_MIN;
-    for(int i=0;i<num;i++)
-    {
-        if(v[i]>first)
-        {
-            sec = first;
-            first = v[i];
-        }
-        else if(v[i]<first && v[i] > sec)
-        {
-            sec = v[i];
-        }
-
-    } 
-    cout<<sec<<endl;
+   for(int i=0;i<str.length();i++)
+   {
+       if(str[i]>='a' && str[i] <= 'z')
+       {
+            m[tmp] = num;
+            num=0;
+            tmp = str[i];
+       }
+       else
+       {
+           num = (num*10)+(str[i]-48); //ASCII Value of 0 is 48 thus '0' = 48, '1' = 49 thus (char_num-48) gives the number
+       }
     
+   }
+   m[tmp] = num;
+
+   for(char i = 'a';i<='z';i++)
+   {
+       if(m[i]>0)
+       {
+          for(int j=1;j<=m[i];j++)
+          {
+              cout<<i;
+          } 
+       }
+   }
 
     return 0;
 }

@@ -42,8 +42,6 @@ The Below Solution is not efficient
 Efficient Solution : https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 */
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 class GFG
  {
 	public static void main (String[] args)
@@ -101,5 +99,6 @@ class GFG
                     System.out.println("-1");
                 
             }
+            s.close();
 	 }
 }
