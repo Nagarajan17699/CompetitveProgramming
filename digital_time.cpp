@@ -159,7 +159,7 @@ int main()
 
              while(flag--)
             {
-            
+//             Here flag = 2 since we need to get value twice once for ten's place and one for one's place 
                 if(flag==1)
                 {    
                 temp = getMax(5,m);
