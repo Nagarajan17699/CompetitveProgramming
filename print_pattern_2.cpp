@@ -36,73 +36,84 @@ using namespace std;
 #define sii(x) insert(x)
 #define ai(x) int arr[x]
 #define vi vector<int>
-#define mii map<int,int>
-#define mci map<char,int>
+#define mii map<int, int>
+#define mci map<char, int>
 #define si set<int>
 #define li list<int>
 #define lc list<char>
-#define vout(v) for(auto i=v.begin(); i!=v.end(); i++){cout<<*i<<" ";}
-#define arrout(arr,n) for(int i=0;i<n;i++){cout<<arr[i]<<" ";}
-#define arrin(arr,n) for(int i=0;i<n;i++){cin>>arr[i];} 
-#define acc(v) accumulate(v.begin(),v.end(),0)
+#define vout(v)                                 \
+    for (auto i = v.begin(); i != v.end(); i++) \
+    {                                           \
+        cout << *i << " ";                      \
+    }
+#define arrout(arr, n)          \
+    for (int i = 0; i < n; i++) \
+    {                           \
+        cout << arr[i] << " ";  \
+    }
+#define arrin(arr, n)           \
+    for (int i = 0; i < n; i++) \
+    {                           \
+        cin >> arr[i];          \
+    }
+#define acc(v) accumulate(v.begin(), v.end(), 0)
 #define vb begin()
 #define ve end()
-#define c(x) cout<<x
-#define sn(x) scanf("%d",&x)
-#define fr(i,x) for(int i=0;i<x;i++)
+#define c(x) cout << x
+#define sn(x) scanf("%d", &x)
+#define fr(i, x) for (int i = 0; i < x; i++)
 
-int fillmat(int row,int col)
+int fillmat(int row, int col)
 {
-	int trow = row,tcol=col;
+    int trow = row, tcol = col;
     char arr[100][100];
     char x = 'X';
-    int strow=0,stcol=0;
-   
-   //Using the Spiral Printing method 
-    while(strow<row && stcol<col)
+    int strow = 0, stcol = 0;
+
+    //Using the Spiral Printing method
+    while (strow < row && stcol < col)
     {
-        for(int i=stcol;i<col;i++)
+        for (int i = stcol; i < col; i++)
         {
-            arr[strow][i]=x;
+            arr[strow][i] = x;
         }
         strow++;
 
-        for(int j=strow;j<row;j++)
+        for (int j = strow; j < row; j++)
         {
-            arr[j][col-1]=x;
+            arr[j][col - 1] = x;
         }
         col--;
 
-        if(strow<row)
+        if (strow < row)
         {
-            for(int i=col-1;i>=stcol;i--)
+            for (int i = col - 1; i >= stcol; i--)
             {
-                arr[row-1][i]=x;
+                arr[row - 1][i] = x;
             }
             row--;
         }
 
-        if(stcol<col)
+        if (stcol < col)
         {
-            for(int i=row-1;i>=strow;i--)
+            for (int i = row - 1; i >= strow; i--)
             {
-                arr[i][stcol]=x;
+                arr[i][stcol] = x;
             }
             stcol++;
         }
-        
-        x = (x == '0')? 'X': '0';
+
+        x = (x == '0') ? 'X' : '0';
     }
 
-
     //Printing the matrix
-     for(int i=0;i<trow;i++)
+    for (int i = 0; i < trow; i++)
     {
-        for(int j=0;j<tcol;j++)
+        for (int j = 0; j < tcol; j++)
         {
-            cout<<arr[i][j]<<" ";
+            cout << arr[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;
@@ -111,18 +122,16 @@ int fillmat(int row,int col)
 int main()
 {
 
-    #ifndef ONLINE_JUDGE
-     freopen("input.txt","r",stdin);
-     freopen("output.txt","w",stdout);
-    #endif
-
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
 
     int row;
     int col;
-   
-    cin>>row>>col;
-   fillmat(row,col);
 
-   
+    cin >> row >> col;
+    fillmat(row, col);
+
     return 0;
 }
