@@ -59,7 +59,7 @@ Sample Input
 
 Sample Output
 
-    28 B
+    28 B---> (The Direction represents which target reached first)
     156 F
     675 B
     102 B
