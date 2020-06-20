@@ -101,5 +101,6 @@
         "cstdbool": "cpp",
         "ctgmath": "cpp",
         "xxatomic": "cpp"
-    }
+    },
+    "python.pythonPath": "C:\\Python38\\python.exe"
 }

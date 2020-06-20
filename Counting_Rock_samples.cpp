@@ -1,13 +1,3 @@
-/*
-Given a jumbled Dictionary order and a string find the smallest lexicograpic string that can
-be formed with the given string
-
-i/p:    Dictionary order: polikujmnhytgbvfredcxswqaz
-        String: abcd
-
-o/p:  bdca
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 #define pb(x) push_back(x)
@@ -42,17 +32,45 @@ int main()
      freopen("output.txt","w",stdout);
     #endif
 
-    set<char> s;
-    string lex,pat;
-    cin>>lex>>pat;
-    for(char c: pat)
-        s.insert(c);
+    int n1,n2;
+    cin>>n1>>n2;
+    vi v(n1);
+    vector<pair<int,int>> vp;
+    vi v2[1000];
 
-    for(char c:lex)
+     for(int i=0;i<n1;i++)
     {
-        if(s.find(c)!=s.end())
-            cout<<c;
+        int tmp;
+        cin>>tmp;
+        v.pb(tmp);
+
     }
 
+    int t = n2;
+    while(t--)
+    {
+        int p1,p2;
+        cin>>p1>>p2;
+        vp.push_back({p1,p2});
+    }
+
+   
+
+    for(int i:v)
+    {
+        for(int j=0;j<n2;j++)
+        {
+            if(i >= vp[j].first && i<=vp[j].second)
+            {
+                v2[j].pb(i);
+               // cout<< vp[j].first<<" "<<vp[j].second<<endl;
+            }
+        }
+    }
+       // vout(v2[0]);
+    for(int i=0;i<n2;i++)
+    {
+        cout<<v2[i].size()<<" ";
+    }
     return 0;
 }
