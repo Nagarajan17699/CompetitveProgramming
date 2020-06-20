@@ -18,8 +18,8 @@ int main()
     string str;
     char temp='(';
    
-    while((temp=='(') || (temp==')')) //this WHILE block can be replaced by "cin>>str". This while loop has been written due to some problem during getting the input from hackerearth site.
-    {
+    while((temp=='(') || (temp==')')) //this WHILE block can be replaced by "cin>>str". 
+    {  			//This while loop has been written due to some problem during getting the input from hackerearth site.
         temp='*';
         cin>>temp;
         //cout<<temp;
