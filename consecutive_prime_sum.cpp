@@ -65,7 +65,7 @@ void sieve(int arr[],int len)  //  Used SIEVE OF ERATOSTHENE to filter prime num
 
 int findprime(int num)
 {
-    int arr[num+1];
+    int arr[10000];
     for(int i=0;i<=num;i++)
     arr[i] = -1;
     
