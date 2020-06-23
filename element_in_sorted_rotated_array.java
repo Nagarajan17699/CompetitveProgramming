@@ -41,11 +41,19 @@ The Below Solution is not efficient
 
 Efficient Solution : https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 */
+import java.io.FileReader;
 import java.util.*;
-class GFG
+class gfg
  {
-	public static void main (String[] args)
+	public static void main (String[] args) throws Exception
 	 {
+         FileReader fr = new FileReader("input.txt");
+         while(fr.read() != '\0')
+         {
+                System.out.println(fr.read());
+         }
+         fr.close();
+
          Scanner s = new Scanner(System.in);
             int t;
             t = s.nextInt();

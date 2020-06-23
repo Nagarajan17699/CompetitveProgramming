@@ -23,13 +23,13 @@ Next N lines, contain a tuple containing 4 values delimited by space
 
 F B T D, where
 
-1.   F​denotes forward displacement in meters
+1. F​ denotes forward displacement in meters
 
-2.    B​denotes backward displacement in meters
+2. B ​denotes backward displacement in meters
 
-3.    T​denotes time taken to cover 1 meter
+3. T ​denotes time taken to cover 1 meter
 
-4.   D​denotes distance from Car's starting position and the wall in backward direction
+4. D ​denotes distance from Car's starting position and the wall in backward direction
 
 Constraints
 First move will always be in backward direction
