@@ -40,7 +40,6 @@ int main()
     int minw_ng  = 30;
 
     double time = ((float)rot/360)*lon;
-    //cout<<time<<endl;
     int hr = ((int)time);
     time -= hr;
     double min_t = time;
@@ -57,3 +56,4 @@ int main()
 
     return 0;
 }
+//End
