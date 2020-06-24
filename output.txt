@@ -1,1 +1,1 @@
-Indices which form equi pair { 3,6 }Slices are { 0,2 },{ 4,5},{ 7,9 }
+775933957
