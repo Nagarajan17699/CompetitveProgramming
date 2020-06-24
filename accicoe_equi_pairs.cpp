@@ -1,5 +1,8 @@
 /*
 Accico Equi Pairs
+
+CONTEST: CODEVITA 
+
 Problem Statement
 Ron Wesley has been bit by a three headed snake and Harry Potter is searching for a potion. The Witch promises to tell the ingredients of the medicine if Harry can find ​equi pair​of an array. Listen to the conversation between Harry The witch to know more about equi pairs.
 
