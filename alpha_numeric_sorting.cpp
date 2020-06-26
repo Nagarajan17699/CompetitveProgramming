@@ -1,7 +1,12 @@
 /*
 Alpha Numeric Sorting
-Problem Statement
-Given text comprising of words and numbers, sort them both in ascending order and print them in a manner that a word is followed by a number. Words can be in upper or lower case. You have to convert them into lowercase and then sort and print them.
+CONTEST: CODEVITA 
+
+Problem Statement:
+Given text comprising of words and numbers, sort them both in ascending order 
+and print them in a manner that a word is followed by a number. 
+Words can be in upper or lower case. You have to convert them into lowercase 
+and then sort and print them.
 
 Input Format
 Each line contains a text in which words are at odd position and numbers are at even position and are delimited by space
