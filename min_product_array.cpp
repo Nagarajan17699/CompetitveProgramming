@@ -113,10 +113,9 @@ int main()
 
     for(int i=0;i<num;i++)
     {
-        int dif = arr[i]*brr[i],mod;
+        int dif = arr[i]*brr[i],mod; // this step is to find the product of two element for each i
 
-        //cout<<arr[i]<<"b";
-
+        // calculating modification based on the multiplication
         if(dif>0 && arr[i]>0)
             mod =  -(2*k);
         else if(dif>0 && arr[i]<0)
@@ -127,9 +126,9 @@ int main()
             mod= -(2*k); 
 
       
-        arr[i]+=mod;
+        arr[i]+=mod; //adding the modification.
         tmp = getMin(arr,brr,num);
-        arr[i]-=mod;
+        arr[i]-=mod; // removing the modification to retain original array
 
         if(tmp<f_min){
             f_min = tmp;

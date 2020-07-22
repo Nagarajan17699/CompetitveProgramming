@@ -102,5 +102,6 @@
         "ctgmath": "cpp",
         "xxatomic": "cpp"
     },
-    "python.pythonPath": "C:\\Python38\\python.exe"
+    "python.pythonPath": "C:\\Python38\\python.exe",
+    "C_Cpp.errorSquiggles": "Enabled"
 }

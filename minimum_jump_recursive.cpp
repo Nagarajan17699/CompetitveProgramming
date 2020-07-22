@@ -1,11 +1,3 @@
-/*
-i/p: 52184 48521
-o/p: yes
-
-i/p: 12345 54123
-o/p: no
-
-*/
 #include <bits/stdc++.h>
 using namespace std;
 #define pb(x) push_back(x)
@@ -30,7 +22,21 @@ using namespace std;
 #define sn(x) scanf("%d",&x)
 #define fr(i,x) for(int i=0;i<x;i++)
 
+int minjump(int i,vi v,int n)
+{
+    if(i>n-1)
+        return INT_MAX-1;
+    if(i==n-1)
+        return 0;
+    int min_ = INT_MAX;
 
+    for(int j=1;j<=v[i];j++)
+    {
+        min_ = min(min_, 1+minjump(i+j,v,n));
+    }
+
+    return min_;
+}
 
 int main()
 {
@@ -40,13 +46,11 @@ int main()
      freopen("output.txt","w",stdout);
     #endif
 
-    long num1,num2;
-    cin>>num1>>num2;
-    string s1,s2;
-    s1 = to_string(num1);
-    s2 = to_string(num2);
-    
-    string s3 = s2+s2;
-    cout<<((s3.find(s1) != string::npos)?"Yes":"No");
-   return 0;
+    vi v;
+    int num;
+    while(cin>>num)
+        v.pb(num);
+    cout<<minjump(0,v,v.size());
+
+    return 0;
 }

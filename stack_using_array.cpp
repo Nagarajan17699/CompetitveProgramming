@@ -1,3 +1,27 @@
+/*
+Stack Using Array
+Problem Statement
+STACK USING ARRAY
+
+Fix the code for push opetaion
+
+Input Format
+scanning the numbers until user enter -1
+
+Constraints
+no constraint
+
+Output Format
+Display the stack elements
+
+Sample Input
+10 20 30 40 50 60 70 15 -1
+Sample Output
+70 could not push .. Stack is Full
+15 could not push .. Stack is Full
+60 50 40 30 20 10 
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define pb(x) push_back(x)
@@ -22,21 +46,7 @@ using namespace std;
 #define sn(x) scanf("%d",&x)
 #define fr(i,x) for(int i=0;i<x;i++)
 
-bool iscount(vi v,int k,int i)
-{
-    i++;k--;
-    for(int j=i;(k!=0);j++)
-    {
-        if(v[j] != k)
-            return false;
-        else
-        {
-            k--;
-        }
-        
-    }
-    return true;
-}
+
 
 int main()
 {
@@ -46,43 +56,31 @@ int main()
      freopen("output.txt","w",stdout);
     #endif
 
-    int t,casei=0;
-    sn(t);
-
-    while(t--)
+    #include <iostream>
+#include <stack>
+using namespace std;
+int main()
+{
+    int n;
+    stack<int> s;
+   int count = 0;
+    while(cin>>n)
     {
-        casei++;
-        int size,k,tmp,count=0;
-        sn(size);sn(k);
-
-        vi v;
-        fr(i,size)
-        {
-            cin>>tmp;
-            v.pb(tmp);
-
-        }
-
-        fr(i,size)
-        {
-            if(v[i]==k)
-            {
-                if(iscount(v,k,i))
-                {
-                    count++;
-                   if(i+(k-1)<=size)
-                   {
-                       i+=(k-1);
-                   }
-                }   
-            }
-        }
-
-    cout<<"Case "<<"#"<<casei<<": "<<count<<endl;
-
+        if(n==-1)
+            break;
+        else if(count++ <=5)
+            s.push(n);
+        else
+            cout<<n<<" could not push .. Stack is Full"<<endl;
     }
-
     
+    while(s.size())
+    {
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+    return 0;
+}
 
     return 0;
 }

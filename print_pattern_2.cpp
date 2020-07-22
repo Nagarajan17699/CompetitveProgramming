@@ -135,3 +135,61 @@ int main()
 
     return 0;
 }
+
+
+/*
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num1,num2;
+    cin>>num1>>num2;
+    
+    char arr[100][100];
+    int m_top=0,m_bot=num1-1,m_f=0,m_l=num2-1,t_int=1;
+    char c='X';
+    while(m_top < m_bot && m_f<m_l)
+    {
+        if((t_int%2)== 1)
+            c='X';
+        else
+            c='0';
+        
+        for(int i=m_f;i<=m_l;i++)
+        {
+            arr[m_top][i] = c;
+        }
+        m_top++;
+        for(int i=m_top;i<=m_bot;i++)
+        {
+            arr[i][m_l] = c;
+        }
+        m_l--;
+        if(m_top<m_bot){
+        for(int i=m_l;i>=m_f;i--)
+        {
+            arr[m_bot][i] = c;
+        }
+        m_bot--;
+        }
+        for(int i=m_bot;i>=m_top;i--)
+        {
+            arr[i][m_f] = c;
+        }
+        m_f++;
+        
+        t_int++;
+    }
+    
+    for(int i=0;i<num1;i++)
+    {
+        for(int j=0;j<num2;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+*/

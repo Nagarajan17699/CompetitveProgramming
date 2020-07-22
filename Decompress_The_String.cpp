@@ -1,10 +1,31 @@
 /*
-i/p: 52184 48521
-o/p: yes
+Decompress The String
+Problem Statement
+DECOMPRESS THE STRING
 
-i/p: 12345 54123
-o/p: no
+Assume that the given string has enough memory
 
+Don't use any extra space(IN-PLACE)
+
+Input Format
+enter the string 
+
+ex i/p
+
+a2b4c6
+Constraints
+no constraint
+
+Output Format
+display the string
+
+ex o/p:
+
+aabbbbcccccc
+Sample Input
+a2b4c6
+Sample Output
+aabbbbcccccc
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -40,13 +61,21 @@ int main()
      freopen("output.txt","w",stdout);
     #endif
 
-    long num1,num2;
-    cin>>num1>>num2;
-    string s1,s2;
-    s1 = to_string(num1);
-    s2 = to_string(num2);
-    
-    string s3 = s2+s2;
-    cout<<((s3.find(s1) != string::npos)?"Yes":"No");
-   return 0;
+    string str;
+    cin>>str;
+    int lenth = str.length();
+    mci m;
+
+    for(int i=0;i<lenth;i+=2)
+    {
+       m[str[i]] = str[i+1]-48;
+    }
+    for(auto i:m)
+    {
+        while(i.second--)
+        {
+            cout<<i.first;
+        }
+    }
+    return 0;
 }

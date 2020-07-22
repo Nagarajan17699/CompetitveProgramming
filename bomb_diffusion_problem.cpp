@@ -26,35 +26,43 @@ using namespace std;
 
 int main()
 {
-    
-    //Comment the ifndef part to execute in compiler
+
     #ifndef ONLINE_JUDGE
      freopen("input.txt","r",stdin);
      freopen("output.txt","w",stdout);
     #endif
 
-    int rot;
-    double lon;
-    cin>>rot>>lon;
-
-    int min_ng = 6;
-    int minw_ng  = 30;
-
-    double time = ((float)rot/360)*lon;
-    int hr = ((int)time);
-    time -= hr;
-    double min_t = time;
-
-    min_t = min_t*12;
-
-    double m_deg = min_t *30;
-    double hr_deg =(float) (hr * 30.0)+(2.5*min_t);
-    
-    float ans = abs(hr_deg-m_deg);
-    if(ans>180)
-        ans = 360 - ans;
-    printf("%.2f",ans);
+    int num,key,arr[10000],res[10000];
+    cin>>num>>key;
+    for(int i=0;i<num;i++)
+        cin>>arr[i];
+    for(int i=0;i<num;i++)
+    {
+        if(arr[i] > 0)
+        {
+            for(int j=1;j<=key;j++)
+            {
+                res[i] += arr[(i+j)%num]; 
+            }
+        }
+        else
+        {
+                                    //cout<<"Here";
+            int t_num = i-key;      //cout<<t_num;
+            if(t_num <0)
+                t_num = num+t_num;
+                
+            for(int j=0;j<key;j++)
+            {
+                                                    //cout<<arr[(t_num+j)%num];
+                res[i] += arr[(t_num+j)%num];
+                                                     //cout<<arr[j]<<" ";
+            }
+        }
+        
+    }
+    for(int i=0;i<num;i++)
+        cout<<res[i]<<" ";
 
     return 0;
 }
-//End
